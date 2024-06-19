@@ -13,12 +13,13 @@ variable "org_id" {
 variable "billing_project" {
   description = "The project id to use for billing"
   type        = string
-  default     = "dbacks-setup-host-project" #Cloud Setup Host Project
+  default     = "dbacks-sbx-bbops" #Cloud Setup Host Project
 }
 
 variable "project_id" {
   description = "The project ID where resources will be created"
   type        = string
+  default = "dbacks-sbx-bbops"
 }
 
 variable "region" {

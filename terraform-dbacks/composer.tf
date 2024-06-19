@@ -1,19 +1,3 @@
-provider "google" {
-  project = var.project_id
-  region  = var.region
-}
-
-variable "project_id" {
-  description = "The project ID where resources will be created"
-  type        = string
-}
-
-variable "region" {
-  description = "Region for GCP resources"
-  type        = string
-  default     = "us-central1"
-}
-
 resource "google_project_service" "composer_api" {
   for_each = toset([
     "composer.googleapis.com",
